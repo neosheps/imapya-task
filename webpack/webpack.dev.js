@@ -9,7 +9,6 @@ module.exports = merge(common, {
     contentBase: './public',
     host: 'localhost',
     historyApiFallback: true,
-    // respond to 404s with index.html
     inline: true,
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],

@@ -30,18 +30,6 @@ module.exports = {
         test: /\.svg$/,
         use: ['@svgr/webpack'],
       },
-      {
-        test: /\.(eot|ttf|woff|woff2)$/i,
-        exclude: /(node_modules)/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              outputPath: 'assets',
-            },
-          },
-        ],
-      },
     ],
   },
   plugins: [
