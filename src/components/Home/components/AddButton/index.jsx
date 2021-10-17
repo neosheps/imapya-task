@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Modal, useModal } from '../../../Modal';
 
 const AddButtonLayout = styled.div`
   width: 100px;
@@ -19,8 +20,8 @@ const AddButtonLayout = styled.div`
   cursor: pointer;
   opacity: 1;
   transition: opacity 0.2s;
-  &:hover{
-      opacity: 0.7;
+  &:hover {
+    opacity: 0.7;
   }
 
   span {
@@ -35,13 +36,14 @@ const AddButtonLayout = styled.div`
 `;
 
 export const AddButton = ({ type = 'wallet' }) => {
-  const onAddClick = () => {
-    console.log('add fire');
-  };
+  const { isShowing, toggle } = useModal();
 
   return (
-    <AddButtonLayout onClick={onAddClick}>
-      <span>+</span> <p>Добавить {type === 'wallet' ? 'кошелек' : 'карту'}</p>
-    </AddButtonLayout>
+    <>
+      <Modal type={type} isShowing={isShowing} hide={toggle} />
+      <AddButtonLayout onClick={toggle}>
+        <span>+</span> <p>Добавить {type === 'wallet' ? 'кошелек' : 'карту'}</p>
+      </AddButtonLayout>
+    </>
   );
 };

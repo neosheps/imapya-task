@@ -6,6 +6,7 @@ import { Title } from '../ui';
 const WalletsLayout = styled.div`
   display: flex;
   gap: 20px;
+  flex-flow: row wrap;
 `;
 
 export const Wallets = ({ walletsData }) => {
@@ -14,7 +15,7 @@ export const Wallets = ({ walletsData }) => {
       <Title>Мои кошельки</Title>
       <WalletsLayout>
         {walletsData.map((walletData) => (
-          <Wallet key={walletData.value} data={walletData} />
+          <Wallet key={walletData.name} data={walletData} />
         ))}
         <AddButton type='wallet' />
       </WalletsLayout>
