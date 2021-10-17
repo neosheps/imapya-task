@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Wallets, Cards } from './components';
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
