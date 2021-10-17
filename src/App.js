@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Home, NavBar } from './components';
+import { Home, SideBar } from './components';
 import './App.css';
 
 const App = () => {
@@ -11,7 +11,7 @@ const App = () => {
 
   return (
     <AppLayout>
-      <NavBar />
+      <SideBar />
       <Home />
     </AppLayout>
   );

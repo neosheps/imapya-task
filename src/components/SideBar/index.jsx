@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Home from '../../../public/assets/home.svg';
 import Card from '../../../public/assets/card.svg';
-const NavBarLayout = styled.div`
+const SideBarLayout = styled.div`
   width: 60px;
   left: 0;
   background: #111747;
@@ -25,9 +25,9 @@ const NavBarLayout = styled.div`
   }
 `;
 
-export const NavBar = () => (
-  <NavBarLayout>
+export const SideBar = () => (
+  <SideBarLayout>
     <Home />
     <Card />
-  </NavBarLayout>
+  </SideBarLayout>
 );

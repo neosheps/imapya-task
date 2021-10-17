@@ -8,7 +8,3 @@ export const addWallet = (walletData) => {
     });
   };
 };
-
-const getData = async () => {
-  //some async actions
-};

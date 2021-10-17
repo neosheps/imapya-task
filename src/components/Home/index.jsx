@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Wallets } from './components';
+import { Wallets, Cards } from './components';
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 
@@ -12,6 +12,7 @@ export const Home = () => {
   return (
     <HomeLayout>
       <Wallets walletsData={wallets} />
+      <Cards cardsData={cards} />
     </HomeLayout>
   );
 };

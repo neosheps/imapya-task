@@ -20,11 +20,11 @@ const initialState = {
   ],
   cards: [
     {
-      nubmer: '************4550',
+      number: '4550',
       paymentSystem: 'Visa',
     },
     {
-      nubmer: '************2367',
+      number: '2367',
       paymentSystem: 'MasterCard',
     },
   ],
