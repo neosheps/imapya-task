@@ -2,16 +2,46 @@ import React from 'react';
 import styled from 'styled-components';
 
 const AddButtonLayout = styled.div`
-  height: 100%;
-  width: 120px;
+  width: 100px;
+  height: 120px;
+  left: 710px;
+  top: 142px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  border-radius: 20px;
+  color: #111747;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.2s;
+  &:hover{
+      opacity: 0.7;
+  }
+
+  span {
+    font-size: 48px;
+    color: #111747;
+  }
+
+  p {
+    font-size: 10px;
+    text-align: center;
+  }
 `;
 
-export const AddButton = () => {
+export const AddButton = ({ type = 'wallet' }) => {
   const onAddClick = () => {
     console.log('add fire');
   };
 
   return (
-    <AddButtonLayout onClick={onAddClick}>+ Добавить кошелек</AddButtonLayout>
+    <AddButtonLayout onClick={onAddClick}>
+      <span>+</span> <p>Добавить {type === 'wallet' ? 'кошелек' : 'карту'}</p>
+    </AddButtonLayout>
   );
 };

@@ -1,0 +1,15 @@
+body,
+p,
+h1,
+h2,
+span {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+#app {
+  min-height: 100vh;
+  display: flex;
+}

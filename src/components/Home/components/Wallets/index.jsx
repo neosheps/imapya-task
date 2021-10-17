@@ -5,16 +5,19 @@ import { AddButton } from '..';
 import { Title } from '../ui';
 const WalletsLayout = styled.div`
   display: flex;
+  gap: 20px;
 `;
 
 export const Wallets = ({ walletsData }) => {
   return (
-    <WalletsLayout>
+    <>
       <Title>Мои кошельки</Title>
-      {walletsData.map((walletData, i) => (
-        <Wallet key={i} data={walletData} />
-      ))}
-      <AddButton />
-    </WalletsLayout>
+      <WalletsLayout>
+        {walletsData.map((walletData) => (
+          <Wallet key={walletData.value} data={walletData} />
+        ))}
+        <AddButton type='wallet' />
+      </WalletsLayout>
+    </>
   );
 };
