@@ -34,6 +34,8 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actionConstants.ADD_WALLET:
       return { ...state, wallets: [action.payload, ...state.wallets] };
+    case actionConstants.ADD_CARD:
+      return { ...state, cards: [action.payload, ...state.cards] };
     default:
       return { ...state };
   }

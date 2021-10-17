@@ -1,14 +1,6 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
-import { Title, Label } from '../ui';
+import { Title, Label, BodyModalWrapper } from '../ui';
 import { ActionButtons } from '..';
-const WalletModalWrapper = styled.form`
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  box-sizing: border-box;
-  height: 100%;
-`;
 
 const checkSumm = (summ) => {
   if (summ < 1) alert('Сумма должна быть больше 0');
@@ -51,7 +43,7 @@ export const Wallet = ({ hide, onEnter }) => {
   return (
     <>
       <Title>Добавить кошелек</Title>
-      <WalletModalWrapper onSubmit={onSumbit}>
+      <BodyModalWrapper onSubmit={onSumbit}>
         <Label>
           <span>Наименование</span>
           <input
@@ -86,7 +78,7 @@ export const Wallet = ({ hide, onEnter }) => {
         </Label>
 
         <ActionButtons onCancel={onCancel} />
-      </WalletModalWrapper>
+      </BodyModalWrapper>
     </>
   );
 };

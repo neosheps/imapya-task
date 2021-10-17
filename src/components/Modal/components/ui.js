@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const Title = styled.h2`
   font-family: Arial;
@@ -21,6 +21,17 @@ const Label = styled.label`
     padding: 3px 5px;
     margin-left: 50px;
   }
+  ${(props) =>
+    props.two &&
+    css`
+      input {
+        display: inline-block;
+        max-width: 57px;
+        &:last-child{
+          margin-left: 10px;
+        }
+      }
+    `}
   span {
     line-height: 24px;
     position: absolute;
@@ -62,4 +73,19 @@ const CancelButton = styled.button`
   padding: 8px 27px;
 `;
 
-export { Title, Label, ButtonWrapper, SumbitButton, CancelButton };
+const BodyModalWrapper = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  box-sizing: border-box;
+  height: 100%;
+`;
+
+export {
+  Title,
+  Label,
+  ButtonWrapper,
+  SumbitButton,
+  CancelButton,
+  BodyModalWrapper,
+};

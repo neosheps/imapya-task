@@ -2,9 +2,9 @@ import React, { useRef, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 import Close from '../../../public/assets/close.svg';
-import { Wallet } from './components';
+import { Wallet, Card } from './components';
 import { useDispatch } from 'react-redux';
-import { addWallet } from '../../store/actions';
+import { addWallet, addCard } from '../../store/actions';
 
 const Overlay = styled.div`
   position: fixed;
@@ -55,6 +55,7 @@ export const Modal = ({ isShowing, hide, type }) => {
     if (type === 'wallet') {
       return dispatch(addWallet(val));
     }
+    return dispatch(addCard(val));
   };
 
   useEffect(() => {
@@ -74,7 +75,9 @@ export const Modal = ({ isShowing, hide, type }) => {
             <CloseIcon onClick={hide} />
             {type === 'wallet' ? (
               <Wallet hide={hide} onEnter={onEnter} />
-            ) : null}
+            ) : (
+              <Card hide={hide} onEnter={onEnter} />
+            )}
           </ModalWrapper>
         </>,
         document.body
