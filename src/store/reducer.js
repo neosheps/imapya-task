@@ -36,7 +36,7 @@ const initialState = {
       currency: 'RUB',
       transactionNumber: '2313123217893',
       paymentType: {
-        number: '4500',
+        card: '4500',
         paymentSystem: 'MasterCard',
       },
     },
@@ -47,7 +47,7 @@ const initialState = {
       currency: 'EUR',
       transactionNumber: '2313121127893',
       paymentType: {
-        number: '4213',
+        card: '4213',
         paymentSystem: 'Visa',
       },
     },
@@ -58,7 +58,7 @@ const initialState = {
       currency: 'USD',
       transactionNumber: '2313121127893',
       paymentType: {
-        number: '4213',
+        card: '4213',
         paymentSystem: 'Visa',
       },
     },
@@ -69,7 +69,7 @@ const initialState = {
       currency: 'RUB',
       transactionNumber: '2313121127893',
       paymentType: {
-        number: '4213',
+        card: '4213',
         paymentSystem: 'MasterCard',
       },
     },
@@ -80,7 +80,7 @@ const initialState = {
       currency: 'EUR',
       transactionNumber: '2313121127893',
       paymentType: {
-        number: '4123',
+        card: '4123',
         paymentSystem: 'Visa',
       },
     },
@@ -91,7 +91,7 @@ const initialState = {
       currency: 'RUB',
       transactionNumber: '2313123217893',
       paymentType: {
-        number: '4500',
+        card: '4500',
         paymentSystem: 'MasterCard',
       },
     },
@@ -102,7 +102,7 @@ const initialState = {
       currency: 'EUR',
       transactionNumber: '2313121127893',
       paymentType: {
-        number: '4213',
+        card: '4213',
         paymentSystem: 'Visa',
       },
     },

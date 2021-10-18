@@ -9,10 +9,9 @@ const TableWrapper = styled.div`
 `;
 
 const StyledTable = styled.table`
+  user-select: none;
   width: 100%;
-
   border-collapse: collapse;
-
   tbody tr:first-child td {
     padding-top: 17px;
     position: relative;

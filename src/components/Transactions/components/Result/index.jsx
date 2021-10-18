@@ -3,7 +3,8 @@ import styled, { css } from 'styled-components';
 import Up from '../../../../../public/assets/up.svg';
 import Down from '../../../../../public/assets/down.svg';
 import EmptyIcon from '../../../../../public/assets/Empty.svg';
-
+import visa from '../../../../../public/assets/Visa.png';
+import masterCard from '../../../../../public/assets/Mastercard.png';
 const ResultWrapper = styled.div`
   width: 240px;
   height: auto;
@@ -39,6 +40,29 @@ const StatusBar = styled.div`
   margin-bottom: 39px;
 `;
 
+const SubTitle = styled.h2`
+  font-size: 9px;
+  line-height: 10px;
+  color: #111747;
+`;
+
+const Value = styled.div`
+  padding: 5px 0 20px;
+  display: flex;
+  align-items: center;
+  p {
+    font-size: 11px;
+    line-height: 13px;
+    color: #111747;
+    display: inline-block;
+  }
+  img {
+    display: inline-block;
+    max-height: 12px;
+    margin-right: 12px;
+  }
+`;
+
 const Status = ({ type }) => {
   const isComing = type === 'incoming';
   return (
@@ -58,15 +82,41 @@ const Empty = () => {
   );
 };
 export const Result = ({ active }) => {
+  if (!active) {
+    return (
+      <ResultWrapper empty={true}>
+        <Empty />
+      </ResultWrapper>
+    );
+  }
+  const cardMaks = (num) => `**** **** **** ${num}`;
+  const randSystem = () => {
+    if (Math.random() >= 0.5) return visa;
+    return masterCard;
+  };
+  const { type, transactionNumber, currency, summ, paymentType, date } = active;
   return (
     <ResultWrapper empty={!active}>
-      {active ? (
-        <>
-          <Status type={active.type} />
-        </>
-      ) : (
-        <Empty />
-      )}
+      <Status type={type} />
+      <SubTitle>Номер транзакции</SubTitle>
+      <Value>
+        <p>{transactionNumber}</p>
+      </Value>
+      <SubTitle>Сумма</SubTitle>
+      <Value>
+        <p>
+          {summ} {currency}
+        </p>
+      </Value>
+      <SubTitle>Способ оплаты</SubTitle>
+      <Value>
+        <img src={randSystem()} />
+        <p>{cardMaks(paymentType.card)}</p>
+      </Value>
+      <SubTitle>Дата</SubTitle>
+      <Value>
+        <p>{date}</p>
+      </Value>
     </ResultWrapper>
   );
 };
