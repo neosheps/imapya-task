@@ -84,6 +84,28 @@ const initialState = {
         paymentSystem: 'Visa',
       },
     },
+    {
+      date: '2021-10-17T23:25:07+0000',
+      type: 'incoming',
+      summ: '6500',
+      currency: 'RUB',
+      transactionNumber: '2313123217893',
+      paymentType: {
+        number: '4500',
+        paymentSystem: 'MasterCard',
+      },
+    },
+    {
+      date: '2021-10-03T23:25:07+0000',
+      type: 'outgoing',
+      summ: '300',
+      currency: 'EUR',
+      transactionNumber: '2313121127893',
+      paymentType: {
+        number: '4213',
+        paymentSystem: 'Visa',
+      },
+    },
   ],
 };
 
