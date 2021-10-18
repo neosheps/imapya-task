@@ -18,7 +18,7 @@ const App = () => {
             <Transactions />
           </Route>
           <Route path='/'>
-            <Transactions />
+            <Home />
           </Route>
         </Switch>
       </AppLayout>

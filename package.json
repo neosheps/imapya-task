@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack serve --open --config ./webpack/webpack.dev.js",
-    "build": "webpack --config ./webpack/webpack.prod.js --progress"
+    "build": "webpack --config ./webpack/webpack.prod.js --progress",
+    "server": "node server.js"
   },
   "dependencies": {
     "date-fns": "^2.25.0",
