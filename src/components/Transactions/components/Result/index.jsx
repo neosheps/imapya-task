@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import Up from '../../../../../public/assets/up.svg';
 import Down from '../../../../../public/assets/down.svg';
-import EmptyIcon from '../../../../../public/assets/Empty.svg';
+import EmptyIcon from '../../../../../public/assets/empty.svg';
 import visa from '../../../../../public/assets/Visa.png';
 import masterCard from '../../../../../public/assets/Mastercard.png';
 const ResultWrapper = styled.div`
